@@ -58,18 +58,21 @@ In real-world AMR applications, such as in a manufacturing facility, tracking th
 ```bash
 ros2 launch trajectory_pkg trajectory_visualization.launch.py
 ```
-
-### 2. Control the TurtleBot3
+### 2. Open Rviz2
+```bash
+rviz2
+```
+### 3. Control the TurtleBot3
 ```bash
 ros2 run turtlebot3_teleop teleop_keyboard
 ```
 
-### 3. Store the Trajectory
+### 4. Store the Trajectory
 ```bash
 ros2 service call /store_path trajectory_pkg/srv/SaveTrajectory "filename: 'my_path' duration: 10.0"
 ```
 
-### 4. Read and Visualize a Stored Trajectory
+### 5. Read and Visualize a Stored Trajectory
 ```bash
 ros2 service call /read_path trajectory_pkg/srv/ReadTrajectory "filename: 'my_path'"
 ```
